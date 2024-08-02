@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bcd875a3.css",
+    "main.js": "/static/js/main.85b5edbb.js",
+    "static/media/e-qurban.jpg": "/static/media/e-qurban.df2cda1fde5268917c6b.jpg",
+    "static/media/otz.jpg": "/static/media/otz.d179b7ca85054f558067.jpg",
+    "static/media/Poppins-Thin.ttf": "/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
+    "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/Poppins-Bold.ttf": "/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/Poppins-ExtraBold.ttf": "/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
+    "static/media/dev.jpg": "/static/media/dev.f6e73c4517115760b4e6.jpg",
+    "static/media/Hammad.hz.svg": "/static/media/Hammad.hz.87db3b0e3a8c0d04e201f2f6d199ff86.svg",
+    "index.html": "/index.html",
+    "main.bcd875a3.css.map": "/static/css/main.bcd875a3.css.map",
+    "main.85b5edbb.js.map": "/static/js/main.85b5edbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bcd875a3.css",
+    "static/js/main.85b5edbb.js"
+  ]
+}
