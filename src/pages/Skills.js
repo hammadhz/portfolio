@@ -27,8 +27,8 @@ const icons = [
 
 const Skills = () => {
   return (
-    <section id="skills">
-      <div className="container h-auto  bg-accent py-10">
+    <section id="skills" className="bg-accent w-full">
+      <div className="container h-auto   py-10 ">
         <h2 className="text-4xl font-bold text-black text-center mb-12 font-poppins">
           My Skills
         </h2>

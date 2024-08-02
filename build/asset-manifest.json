@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bcd875a3.css",
-    "main.js": "/static/js/main.85b5edbb.js",
+    "main.css": "/static/css/main.363d3f79.css",
+    "main.js": "/static/js/main.c7fb152b.js",
     "static/media/e-qurban.jpg": "/static/media/e-qurban.df2cda1fde5268917c6b.jpg",
     "static/media/otz.jpg": "/static/media/otz.d179b7ca85054f558067.jpg",
     "static/media/Poppins-Thin.ttf": "/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
@@ -13,11 +13,11 @@
     "static/media/dev.jpg": "/static/media/dev.f6e73c4517115760b4e6.jpg",
     "static/media/Hammad.hz.svg": "/static/media/Hammad.hz.87db3b0e3a8c0d04e201f2f6d199ff86.svg",
     "index.html": "/index.html",
-    "main.bcd875a3.css.map": "/static/css/main.bcd875a3.css.map",
-    "main.85b5edbb.js.map": "/static/js/main.85b5edbb.js.map"
+    "main.363d3f79.css.map": "/static/css/main.363d3f79.css.map",
+    "main.c7fb152b.js.map": "/static/js/main.c7fb152b.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcd875a3.css",
-    "static/js/main.85b5edbb.js"
+    "static/css/main.363d3f79.css",
+    "static/js/main.c7fb152b.js"
   ]
 }

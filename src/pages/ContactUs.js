@@ -68,41 +68,41 @@ const Contact = () => {
         });
         setError(null);
       }
-      await emailjs
-        .sendForm(
-          process.env.REACT_APP_EMAIL_SERVICE,
-          process.env.REACT_APP_TEMP_SERVICE,
-          form.current,
-          {
-            publicKey: process.env.REACT_APP_PUBLIC_KEY,
-          }
-        )
-        .then(
-          () => {
-            toast.success("Email sent Successfully!", {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-            });
-          },
-          (error) => {
-            toast.error(error, {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-            });
-          }
-        );
+      // await emailjs
+      //   .sendForm(
+      //     process.env.REACT_APP_EMAIL_SERVICE,
+      //     process.env.REACT_APP_TEMP_SERVICE,
+      //     form.current,
+      //     {
+      //       publicKey: process.env.REACT_APP_PUBLIC_KEY,
+      //     }
+      //   )
+      //   .then(
+      //     () => {
+      //       toast.success("Email sent Successfully!", {
+      //         position: "top-right",
+      //         autoClose: 5000,
+      //         hideProgressBar: false,
+      //         closeOnClick: true,
+      //         pauseOnHover: true,
+      //         draggable: true,
+      //         progress: undefined,
+      //         theme: "light",
+      //       });
+      //     },
+      //     (error) => {
+      //       toast.error(error, {
+      //         position: "top-right",
+      //         autoClose: 5000,
+      //         hideProgressBar: false,
+      //         closeOnClick: true,
+      //         pauseOnHover: true,
+      //         draggable: true,
+      //         progress: undefined,
+      //         theme: "light",
+      //       });
+      //     }
+      //   );
     } catch (error) {
       toast.error(error, {
         position: "top-right",
