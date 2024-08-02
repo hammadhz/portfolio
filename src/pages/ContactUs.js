@@ -6,6 +6,8 @@ import TextArea from "../components/TextArea";
 import { validation } from "../utils/validation";
 import { MdErrorOutline } from "react-icons/md";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +45,7 @@ const Contact = () => {
 
     if (name === "name") {
       // Name validation regex: only allow letters, spaces, and apostrophes
-      const nameRegex = /^[a-zA-Z\s']*$/;
+
       // Sanitize value to remove invalid characters
       validValue = value.replace(/[^a-zA-Z\s]/g, "");
     }
@@ -56,7 +58,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const errResponse = validation(formData);
-      if (errResponse != "") setError(errResponse);
+      if (errResponse !== "") setError(errResponse);
       else {
         setFormData({
           name: "",
@@ -67,21 +69,51 @@ const Contact = () => {
         setError(null);
       }
       await emailjs
-        .send("service_2e2rzyr", "template_thy2bvf", formData, {
-          publicKey: "P5a478lU3wz6Rs6eg",
-        })
+        .sendForm(
+          process.env.REACT_APP_EMAIL_SERVICE,
+          process.env.REACT_APP_TEMP_SERVICE,
+          form.current,
+          {
+            publicKey: process.env.REACT_APP_PUBLIC_KEY,
+          }
+        )
         .then(
           () => {
-            console.log("success!");
+            toast.success("Email sent Successfully!", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
           },
           (error) => {
-            console.log(error);
+            toast.error(error, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
           }
         );
-      console.log(error, "err");
-      console.log(formData);
     } catch (error) {
-      console.log(error);
+      toast.error(error, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
 
@@ -107,7 +139,7 @@ const Contact = () => {
           animate="visible"
           variants={formVariants}
         >
-          <form onSubmit={handleEmailSubmit} className="space-y-6">
+          <form ref={form} onSubmit={handleEmailSubmit} className="space-y-6">
             <div className="flex flex-col gap-3">
               <label
                 htmlFor="name"
@@ -245,6 +277,7 @@ const Contact = () => {
             />
           </form>
         </motion.div>
+        <ToastContainer />
       </div>
     </section>
   );

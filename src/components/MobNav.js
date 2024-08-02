@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import the hamburger and close icons
 
 const MobileNav = ({ isOpen, handleOpenSideBar }) => {

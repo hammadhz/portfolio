@@ -1,7 +1,7 @@
 // Footer.js
 import React from "react";
 import { motion } from "framer-motion";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import logo from "../assets/svg/Hammad.hz.svg";
 import { ReactSVG } from "react-svg";
 
@@ -35,6 +35,22 @@ const Footer = () => {
                   className="font-semibold text-lg font-poppins"
                 >
                   Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  className="font-semibold text-lg font-poppins"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  className="font-semibold text-lg font-poppins"
+                >
+                  Experience
                 </a>
               </li>
               <li>

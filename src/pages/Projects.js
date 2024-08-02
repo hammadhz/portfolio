@@ -1,29 +1,27 @@
 // Projects.js
 import React from "react";
-import { motion } from "framer-motion";
+import ProjectCard from "../components/ProjectCard";
+import otz from "../assets/img/projects/otz.jpg";
+import equrban from "../assets/img/projects/e-qurban.jpg";
 
 const projects = [
   {
-    title: "Project One",
+    title: "One Tranzact",
     description:
-      "A React.js application that provides a seamless user experience.",
-    link: "#",
-    image: "https://via.placeholder.com/300", // Replace with your project images
+      "One Tranzact is an advanced loan application platform designed for One TranzactSdnBhd. It features a seamless EKYC process for identity verification through face and ID card recognition, tailored for the Malaysian market.",
+    link: "https://frontend.onetranzact.com.my/",
+    image: otz, // Replace with your project images
   },
   {
-    title: "Project Two",
-    description: "A Next.js website optimized for SEO and performance.",
-    link: "#",
-    image: "https://via.placeholder.com/300", // Replace with your project images
+    title: "EQurban",
+    description:
+      "E-Qurban is a comprehensive qurban management application by MBP Solutions Sdn. Bhd., facilitating the purchase of cattle parts for qurbani in Malaysia. It integrates FWX M1 payment methods, offering installment plans, transaction details, and qurban history to enhance the ritual experience.",
+    link: "https://e-qurban.com/",
+    image: equrban, // Replace with your project images
   },
 ];
 
 const Projects = () => {
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
-  };
-
   return (
     <section id="projects" className="bg-black py-20">
       <div className="container mx-auto text-center">
@@ -32,7 +30,24 @@ const Projects = () => {
         </h2>
         <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              projectUrl={project.link}
+              imageUrl={project.image}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
+
+{
+  /* <motion.div
               key={index}
               className="bg-[#ffffff] rounded-lg shadow-lg overflow-hidden max-w-sm"
               initial="hidden"
@@ -54,12 +69,5 @@ const Projects = () => {
                   Learn More
                 </a>
               </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Projects;
+            </motion.div> */
+}

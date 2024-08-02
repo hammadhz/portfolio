@@ -40,20 +40,19 @@ const Hero = () => {
             with a keen eye for detail. I enjoy turning complex problems into
             elegant solutions.
           </p>
-          <div className="flex items-center gap-3 lg:flex-row flex-col">
-            <a
-              href="#contact"
-              className="bg-accent font-poppins text-black py-2 px-6 rounded-lg text-lg font-bold hover:bg-accent/80 border border-b-[6px] border-b-tertiary"
-            >
-              Get in Touch
-            </a>
-            <a
+
+          <a
+            href="#contact"
+            className="bg-accent font-poppins text-black py-2 px-6 rounded-lg text-lg font-bold hover:bg-accent/80 border border-b-[6px] border-b-tertiary"
+          >
+            Get in Touch
+          </a>
+          {/* <a
               href="#contact"
               className="bg-accent font-poppins text-black py-2 px-6 rounded-lg text-lg font-bold hover:bg-accent/80 border border-b-[6px] border-b-tertiary"
             >
               Download My Resume
-            </a>
-          </div>
+            </a> */}
         </motion.div>
         {/* Right Side */}
         <motion.div className="lg:w-1/2" variants={imageVariants}>
